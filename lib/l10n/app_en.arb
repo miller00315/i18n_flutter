@@ -1,4 +1,5 @@
 {
+    "@@locale": "en",
     "appTitle": "Heroes of Computer Science",
     "openSettings": "Open settings",
     "settings": "Settings",
@@ -13,6 +14,17 @@
         "date": {
             "type": "DateTime",
             "format": "yMMMd"
+        }
+    },
+    "fullName": "Full name {firstName} {surname}",
+    "@fullName": {
+        "placeholders": {
+            "firstName": {
+                "type": "String"
+            },
+            "surname": {
+                "type": "String"
+            }
         }
     }
 }

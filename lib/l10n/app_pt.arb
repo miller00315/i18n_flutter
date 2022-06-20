@@ -1,4 +1,5 @@
 {
+    "@@locale": "pt",
     "appTitle": "Heróis da ciência da computação",
     "openSettings": "Abrir configurações",
     "settings": "Configurações",
@@ -14,5 +15,6 @@
             "type": "DateTime",
             "format": "dd/MM/yyyy"
         }
-    }
+    },
+    "fullName": "Nome completo {firstName} {surname}"
 }
