@@ -18,7 +18,11 @@ class Home extends StatelessWidget {
           )
         ],
       ),
-      body: Container(),
+      body: SafeArea(
+        child: Column(
+          children: const [],
+        ),
+      ),
     );
   }
 }

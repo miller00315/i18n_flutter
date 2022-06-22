@@ -17,7 +17,7 @@ class LocalizationDataSourceImpl implements LocalizationDataSourceBase {
     final locale = sharedPreferences.getString('locale');
 
     if (locale == null) {
-      return await getCurrentLocale();
+      return const Locale('en');
     }
 
     return Locale.fromSubtags(languageCode: locale);
