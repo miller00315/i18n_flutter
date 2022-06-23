@@ -35,6 +35,8 @@ dependencies:
 
   cupertino_icons: ^1.0.2
 
+  auto_size_text: ^3.0.0
+
   dartz: ^0.10.1
 
   device_preview: ^1.1.0
