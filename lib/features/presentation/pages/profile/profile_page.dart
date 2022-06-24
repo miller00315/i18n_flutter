@@ -1,5 +1,7 @@
+import 'package:app_with_location/features/presentation/pages/profile/widgets/responsive_app_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
+import 'package:responsive_framework/responsive_framework.dart';
 
 class ProfilePage extends StatelessWidget {
   static const routeName = '/profile';
@@ -8,10 +10,25 @@ class ProfilePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    return ResponsiveWrapper.builder(
+      ClampingScrollWrapper.builder(context, content(context)),
+      defaultScale: true,
+      breakpoints: [
+        const ResponsiveBreakpoint.resize(450, name: MOBILE),
+        const ResponsiveBreakpoint.resize(700, name: TABLET),
+        const ResponsiveBreakpoint.resize(800, name: DESKTOP),
+      ],
+    );
+  }
+
+  Widget content(context) {
     return Scaffold(
-      appBar: AppBar(
-        centerTitle: true,
-        title: Text(AppLocalizations.of(context)?.profile ?? 'No title'),
+      appBar: const PreferredSize(
+        preferredSize: Size(
+          double.infinity,
+          52,
+        ),
+        child: ResponsiveAppBar(),
       ),
       body: Container(),
     );

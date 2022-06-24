@@ -34,8 +34,7 @@ class App extends StatelessWidget {
   Widget buildWithInheritedBlocStates() =>
       BlocBuilder<LocalizationBloc, LocalizationState>(
         builder: (_, localeState) => BlocBuilder<ThemeBloc, ThemeState>(
-          builder: (context, themeState) => buildWidgetWithInheritedStates(
-            context,
+          builder: (_, themeState) => buildWidgetWithInheritedStates(
             localeState,
             themeState,
           ),
@@ -43,15 +42,13 @@ class App extends StatelessWidget {
       );
 
   Widget buildWidgetWithInheritedStates(
-    BuildContext context,
     LocalizationState localeState,
     ThemeState themeState,
   ) =>
       MaterialApp(
         builder: DevicePreview.appBuilder,
         locale: localeState.locale,
-        onGenerateTitle: (_) =>
-            AppLocalizations.of(context)?.appTitle ?? 'Cant access title',
+        onGenerateTitle: (_) => 'Heroes',
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
         theme: themeState.themeData,

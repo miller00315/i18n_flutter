@@ -29,8 +29,10 @@ class HomePageDrawer extends StatelessWidget {
           child: Column(
             children: [
               GestureDetector(
-                onTap: () =>
-                    Navigator.of(context).pushNamed(ProfilePage.routeName),
+                onTap: () {
+                  Navigator.pop(context);
+                  Navigator.of(context).pushNamed(ProfilePage.routeName);
+                },
                 child: Row(
                   children: [
                     const Icon(
