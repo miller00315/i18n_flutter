@@ -1,4 +1,5 @@
 import 'package:app_with_location/features/presentation/pages/home/widgets/app_bar/web_app_bar_responsive_content.dart';
+import 'package:app_with_location/features/presentation/pages/profile/profile_page.dart';
 import 'package:app_with_location/features/presentation/pages/settings/settings_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
@@ -28,7 +29,8 @@ class WebAppBar extends StatelessWidget {
           SizedBox(
             height: 38,
             child: OutlinedButton(
-              onPressed: () {},
+              onPressed: () =>
+                  Navigator.of(context).pushNamed(ProfilePage.routeName),
               style: OutlinedButton.styleFrom(
                 side: const BorderSide(
                   width: 2.0,

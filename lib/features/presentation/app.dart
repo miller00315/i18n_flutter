@@ -1,6 +1,7 @@
 import 'package:app_with_location/features/presentation/bloc/localization_bloc/localization_bloc.dart';
 import 'package:app_with_location/features/presentation/bloc/theme_bloc/theme_bloc.dart';
 import 'package:app_with_location/features/presentation/pages/home/home_page.dart';
+import 'package:app_with_location/features/presentation/pages/profile/profile_page.dart';
 import 'package:app_with_location/features/presentation/pages/settings/settings_page.dart';
 import 'package:app_with_location/injection_container.dart';
 import 'package:device_preview/device_preview.dart';
@@ -56,8 +57,9 @@ class App extends StatelessWidget {
         theme: themeState.themeData,
         initialRoute: HomePage.routeName,
         routes: {
-          HomePage.routeName: (context) => const HomePage(),
-          SettingsPage.routeName: (context) => const SettingsPage(),
+          HomePage.routeName: (_) => const HomePage(),
+          SettingsPage.routeName: (_) => const SettingsPage(),
+          ProfilePage.routeName: (_) => const ProfilePage(),
         },
       );
 }

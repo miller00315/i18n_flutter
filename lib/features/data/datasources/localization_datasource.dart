@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+
 
 abstract class LocalizationDataSourceBase {
   Future<Locale> getCurrentLocale();
@@ -17,7 +19,7 @@ class LocalizationDataSourceImpl implements LocalizationDataSourceBase {
     final locale = sharedPreferences.getString('locale');
 
     if (locale == null) {
-      return const Locale('en');
+      return AppLocalizations.supportedLocales.first;
     }
 
     return Locale.fromSubtags(languageCode: locale);

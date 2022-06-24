@@ -3,6 +3,7 @@
     "appTitle": "Heróis da ciência da computação",
     "openSettings": "Abrir configurações",
     "settings": "Configurações",
+    "profile": "Perfil",
     "heroCount": "{count, plural, =0{Sem heróis} =1{1 herói} other{{count} heróis}}",
     "@heroCount": {
         "placeholders": {
